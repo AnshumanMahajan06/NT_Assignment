@@ -1,7 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url('dicePhoto/b1.jpg');
+    background-image: url('b1.jpg');
 }
 .container {
     max-width: 600px;
