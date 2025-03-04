@@ -5,8 +5,8 @@ const diceElement = document.getElementById('dice');
 
 function rollDice() {
     let roll = Math.floor(Math.random() * 6) + 1;
-    document.getElementById("dice").src = `dicePhoto/dice${roll}.png`;
-   
+    document.getElementById("dice").src = `dice${roll}.png`;
+   ////template literals-This means you can insert variables or expressions directly into the string.
     if (roll === 1) {
         currentScores[currentPlayer] = 0;
         switchTurn();
