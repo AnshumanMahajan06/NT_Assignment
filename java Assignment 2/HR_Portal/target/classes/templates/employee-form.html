@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+    <link rel="stylesheet"  type="text/css" th:href="@{/style.css}">
+</head>
+<body>
+    <h1>Employee Form</h1>
+    <form th:action="@{/save}" th:object="${employee}" method="post">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label>First Name:</label>
+            <input type="text" th:field="*{firstName}" required/>
+        </div>
+        <div>
+            <label>Last Name:</label>
+            <input type="text" th:field="*{lastName}" required/>
+        </div>
+
+        
+        <div>
+            <label>Email:</label>
+            <input type="email" th:field="*{email}" required/>
+        </div>
+
+        
+        <div>
+            <label>Image URL:</label>
+            <input type="text" th:field="*{imageUrl}" required/>
+        </div>
+
+        
+        <div>
+            <label>salary:</label>
+            <input type="number" th:field="*{salary}" required/>
+        </div>
+        <div>
+            <label>Department:</label>
+            <select th:field="*{department.id}">
+                <option th:each="department : ${departments}" th:value="${department.id}" th:text="${department.name}"></option>
+
+            </select>
+            <a class="button" href="/departments/add" style="">Create New Department</a>
+        </div>
+
+        <div>
+            <button type="submit">save</button>
+        </div>
+     
+    </form>
+    <a class="button" href="/">Back to Employee List</a>
+        
+    
+</body>
+</html>

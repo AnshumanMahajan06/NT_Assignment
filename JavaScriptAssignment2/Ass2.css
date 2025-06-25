@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #daf8cd;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+#app {
+    max-width: 600px;
+    margin: 120px auto;
+    background: #b4cbfa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    background: #61dafb;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+button:hover {
+    background: #21a1f1;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+#timer {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#score {
+    font-size: 18px;
+    margin-top: 10px;
+}
+#feedback {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: yellow;
+}
+@keyframes changeColor {
+    0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: orange; }
+    100% { color: red; }
+}
+
+#title {
+    font-size: 24px;
+    font-weight: bold;
+    animation: changeColor 3s infinite; /* Change color every 3 seconds */
+}
